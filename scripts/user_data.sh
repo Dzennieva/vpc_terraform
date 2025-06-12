@@ -30,7 +30,6 @@ def hello():
 
 if __name__ == '__main__':
     # Gunicorn will manage the server, but for direct testing:
-    # app.run(host='0.0.0.0', port=80)
     pass
 EOF
 
@@ -44,7 +43,7 @@ After=network.target
 User=ubuntu 
 Group=ubuntu 
 WorkingDirectory=/var/www/web_app 
-ExecStart=/usr/bin/env gunicorn --workers 4 --bind 0.0.0.0:8080 app:app
+ExecStart=/usr/bin/env gunicorn --workers 4 --bind 0.0.0.0:8000 app:app
 Restart=always
 
 [Install]
