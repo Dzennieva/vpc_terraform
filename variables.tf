@@ -71,6 +71,6 @@ variable "asg_desired_capacity" {
 variable "app_port" {
   description = "The port on which the Python application listens."
   type        = number
-  default     = 8080
+  default     = 8000
 }
 
