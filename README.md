@@ -137,21 +137,21 @@ Open variables.tf in the root directory and update the following:
 Navigate to the root of the project in your terminal and run:
 
 
- <pre> ```bash terraform init```</pre>
+ <pre> terraform init</pre>
 
 This command downloads the necessary AWS provider and initializes the modules.
 
 4. **Review the Plan:**
 To see exactly what Terraform will create, modify, or destroy, run:
 
-<pre> ```bash terraform plan```</pre>
+<pre> terraform plan</pre>
 
 Review the output carefully to ensure it aligns with your expectations.
 
 5. **Apply the Configuration:**
 If the plan looks good, apply the configuration to provision the resources in your AWS account:
 
-<pre> ```bash terraform apply ```</pre>
+<pre> terraform apply </pre>
 
 Type ```yes``` when prompted to confirm the deployment.
 
@@ -160,7 +160,7 @@ Once terraform apply completes, Terraform will output the DNS name of your Appli
 
 #### Outputs:
 
-<pre> ```bash alb_dns_name = "your-alb-dns-name.us-east-1.elb.amazonaws.com"```</pre>
+<pre> alb_dns_name = "your-alb-dns-name.us-east-1.elb.amazonaws.com"</pre>
 
 
 Copy the ```alb_dns_name``` value and paste it into your web browser. You should see the "Hello from Flask app on instance: [hostname]!" message.
@@ -170,7 +170,7 @@ A simple Python Flask application is deployed on the EC2 instances:
 
 ```app.py:```
 
-<pre>```python
+<pre>
 from flask import Flask
 import socket
 
@@ -182,7 +182,7 @@ def hello():
     return f"Hello from Flask app on instance: {hostname}!"
 
 if __name__ == '__main__':
-    pass # Gunicorn will manage the server ```</pre>
+    pass # Gunicorn will manage the server </pre>
 
 
 ##  📈 Future Enhancements
@@ -203,6 +203,6 @@ This project provides a solid foundation. Consider these enhancements to further
 ## 🗑️ Cleaning Up
 To destroy all the resources created by this Terraform configuration (and avoid incurring AWS costs), navigate to the root of the project in your terminal and run:
 
-<pre> ```bash terraform destroy``` </pre>
+<pre>  terraform destroy </pre>
 
 Type ```yes``` when prompted to confirm the destruction.
